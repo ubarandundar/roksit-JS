@@ -49,14 +49,13 @@
                 <div class="mb-3 col-sm-4">
                     <label for="Iller" class="form-label">İl</label>
                     <select class="form-select required" aria-label="Default select example" id="Iller">
-                        <option value="0">Seçiniz...</option>
+                        <option>Seçiniz...</option>
                     </select>
                 </div>
                 <div class="mb-3 col-sm-4">
                     <label for="Ilceler" class="form-label">İlçe</label>
-                    <select class="form-select required" aria-label="Default select example" id="Ilceler"
-                        disabled="disabled">
-                        <option value="0">Seçiniz...</option>
+                    <select class="form-select required" aria-label="Default select example" id="Ilceler" disabled>
+                        <option>Seçiniz...</option>
                     </select>
                 </div>
                 <div class="mb-3 col-sm-4">
@@ -75,11 +74,11 @@
                     <input type="text" class="form-control" id="adres-2">
                 </div>
             </div>
-
-            <button type="submit" class="btn btn-secondary">Banner Ekle</button>
-            <button type="submit" class="btn btn-danger">Temizle</button>
-            <button type="submit" class="btn btn-success">Oluştur</button>
+            <button class="btn btn-secondary">Banner Ekle</button>
+            <button type="button" class="btn btn-danger" id="delete-button">Temizle</button>
         </form>
+
+
     </div>
 
     <h2 class="h2 text-center">ÖNİZLEME</h2>

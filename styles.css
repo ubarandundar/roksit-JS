@@ -39,6 +39,7 @@ img {
 
 .vlg {
     border-right: 6px solid green;
+    height: 100px;
     margin: 0 10px;
 }
 
@@ -55,11 +56,11 @@ img {
 }
 
 #p-name {
-    font-weight: 900 !important;
+    font-weight: 700;
 }
 
 #p-title {
-    font-weight: 500 !important;
+    font-weight: 400;
 }
 
 #p-telephone,
