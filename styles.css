@@ -1,0 +1,91 @@
+body {
+    margin: 20px;
+}
+
+form {
+    width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.h2 {
+    margin-top: 50px;
+}
+
+.view {
+    margin-bottom: 20px;
+    width: 550px;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    font-size: 10px;
+}
+
+img {
+    display: block;
+    height: 35px;
+    width: 250px;
+}
+
+#p-email {
+    text-decoration: underline;
+    color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+}
+
+#roksit {
+    text-decoration: underline;
+    color: black;
+}
+
+.vlg {
+    border-right: 6px solid green;
+    margin: 0 10px;
+}
+
+.vlb {
+    border-right: 6px solid rgb(1, 5, 1);
+    height: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.address {
+    display: inline-block;
+}
+
+#p-name {
+    font-weight: 900 !important;
+}
+
+#p-title {
+    font-weight: 500 !important;
+}
+
+#p-telephone,
+#p-telephone-other,
+.address {
+    color: grey;
+}
+
+.signature {
+    background-color: white;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.signature-cell {
+    flex: 1;
+    justify-content: end;
+    display: flex;
+}
+
+.description-cell {
+    flex: 1;
+    display: flex;
+}
+
+.empty-leftside,
+.empty-rightside {
+    flex: 1;
+    display: flex;
+}
