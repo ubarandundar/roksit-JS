@@ -124,14 +124,15 @@ addBannerButton.addEventListener('click', function () {
 });
 
 // Load Image Event for Banner
-window.addEventListener('load', function () {
-    document.querySelector('input[type="file"]').addEventListener('change', function () {
-        if (this.files && this.files[0]) {
-            var img = document.querySelector('.myImg');
-            img.onload = () => {
-                URL.revokeObjectURL(img.src);
-            }
-            img.src = URL.createObjectURL(this.files[0]);
-        }
-    });
+document.querySelector('input[type="file"]').addEventListener('change', function () {
+    if (this.files && this.files[0]) {
+        var img = document.querySelector('.myImg');
+        const FR = new FileReader();
+
+        FR.addEventListener("load", function (evt) {
+            img.src = evt.target.result;
+        });
+
+        FR.readAsDataURL(this.files[0]);
+    }
 });
