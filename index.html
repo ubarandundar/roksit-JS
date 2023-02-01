@@ -17,10 +17,22 @@
 
 <body>
 
-    <h2 class="text-center">İMZA ÜRETİCİ</h2>
+    <h2 class="text-center">İMZA ÜRETME FORMU</h2>
+
 
     <div class="main-form container">
         <form class="form-control">
+            <div class="row">
+                <div class="mb-3 col-sm-12">
+                    <label for="firma" class="form-label">Firma</label>
+                    <select class="form-control" id="firma" required>
+                        <option value="">Seçiniz...
+                        </option>
+                        <option value="Roksit">Roksit</option>
+                        <option value="DNSSense">DNSSense</option>
+                    </select>
+                </div>
+            </div>
             <div class="row">
                 <div class="mb-3 col-sm-6">
                     <label for="name-surname" class="form-label">Ad ve Soyad</label>
@@ -46,33 +58,21 @@
                 </div>
             </div>
             <div class="row">
-                <div class="mb-3 col-sm-4">
-                    <label for="Iller" class="form-label">İl</label>
-                    <select class="form-select required" aria-label="Default select example" id="Iller">
-                        <option>Seçiniz...</option>
-                    </select>
-                </div>
-                <div class="mb-3 col-sm-4">
-                    <label for="Ilceler" class="form-label">İlçe</label>
-                    <select class="form-select required" aria-label="Default select example" id="Ilceler" disabled>
-                        <option>Seçiniz...</option>
-                    </select>
-                </div>
-                <div class="mb-3 col-sm-4">
-                    <label for="posta-kodu" class="form-label">Posta Kodu</label>
-                    <input type="text" class="form-control" id="posta-kodu" placeholder="Posta Kodu">
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="mb-3 col-sm-6">
+                <div class="mb-3 col-sm-12">
                     <label for="adres" class="form-label">Adres</label>
-                    <input type="text" class="form-control" id="adres" placeholder="Adres">
+                    <select class="form-control" id="adres" required>
+                        <option value="">Seçiniz...
+                        </option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
                 </div>
-                <div class="mb-3 col-sm-6">
-                    <label for="adres-2" class="form-label">Adres 2</label>
-                    <input type="text" class="form-control" id="adres-2" placeholder="Adres 2">
-                </div>
+
             </div>
             <div>
                 <input type="file" class="form-control add-banner-button" accept="image/jpeg, image/png, image/jpg"
@@ -81,6 +81,8 @@
             </div>
             <br>
             <button type="button" class="btn btn-danger mt-2" id="delete-button">İçeriği Temizle</button>
+            <button type="button" class="btn btn-warning mt-2" id="logo-delete-button">Logo'yu Sil</button>
+            <button type="button" class="btn btn-info mt-2" id="website-delete-button">Website'yi Sil</button>
             <button type="button" class="btn btn-secondary mt-2" id="banner-delete-button">Banner'ı Sil</button>
     </div>
     </form>
@@ -96,8 +98,7 @@
         <div class="signature">
             <div class="d-flex">
                 <div class="signature-cell">
-                    <figure>
-                        <img src="/assets/RoksitLogoSlogan.png" alt="roksit-logo">
+                    <figure id="sig-figure">
                     </figure>
                 </div>
                 <div class="vlg"></div>
@@ -108,14 +109,7 @@
                         <div id="p-email">ubarandundar@gmail.com</div>
                         <div id="p-telephone">+90 0531 234 89 62</div>
                         <div id="p-telephone-other">+90 0212 294 44 94</div>
-                        <div>
-                            <div class="address mt-1" id="p-adres">Orhan Gazi Mah 1659 Sok</div>
-                            <div class="address" id="p-adres-2">No 3 Daire 52</div>
-                        </div>
-                        <div>
-                            <div class="address" id="p-posta-kodu">34506</div>
-                            <div class="address" id="p-iller">Istanbul</div><span class="sig-divider">/</span>
-                            <div class="address" id="p-ilceler">Esenyurt</div>
+                        <div class="address mt-1" id="p-adres">Orhan Gazi Mah 1659 Sok No-3 Daire-52 Esenyurt / Istanbul
                         </div>
                     </section>
                 </div>
@@ -124,10 +118,9 @@
                 <div class="empty-leftside"></div>
                 <div class="vlb"></div>
                 <div class="empty-rightside">
-                    <div id="roksit">www.roksit.com</div>
                 </div>
             </div>
-            <div class="banner-cell">
+            <div class="banner-cell d-flex justify-content-center">
             </div>
         </div>
     </div>

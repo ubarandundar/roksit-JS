@@ -1,5 +1,6 @@
 body {
     margin: 20px;
+    padding-bottom: 100px;
 }
 
 form {
@@ -21,7 +22,7 @@ form {
     letter-spacing: 0.25px;
 }
 
-img {
+.sig-image {
     display: block;
     height: 35px;
     width: 250px;
@@ -34,7 +35,7 @@ img {
     color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
 }
 
-#roksit {
+.sig-website {
     text-decoration: underline;
     color: #13112f;
     margin-top: auto;
@@ -83,6 +84,12 @@ img {
     font-family: 'Red Hat Display', sans-serif;
 }
 
+h2 {
+    font-family: 'Red Hat Display', sans-serif;
+    text-shadow: 2px;
+    text-shadow: 1px 1px 1px rgb(28, 43, 175);
+}
+
 .signature-cell {
     flex: 1;
     justify-content: end;
@@ -107,4 +114,5 @@ input::placeholder {
 
 .myImg {
     max-width: 100%;
+    margin-top: 10px;
 }
