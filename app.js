@@ -109,7 +109,6 @@ iller.addEventListener('change', function () {
     ilceler.innerHTML = '';
     for (let i = 0; i < data.length; i++) {
         if (this.value === data[i].il) {
-            console.log(data[i].il)
             for (let j = 0; j < data[i].ilceleri.length; j++) {
                 const ilc = data[i].ilceleri[j];
                 const opt = document.createElement('option');
