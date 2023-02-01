@@ -10,6 +10,6 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
-        server: ftp://78.135.107.53/
+        server: ftp://78.135.107.53:21/
         username: admin_baran_github_action
         password: wBMjx@J*cqy3#Kf7
