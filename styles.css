@@ -105,7 +105,6 @@ input::placeholder {
     font-style: italic;
 }
 
-#myImg {
-    width: 500px;
-    height: 100px;
+.myImg {
+    max-width: 100%;
 }
