@@ -1,9 +1,10 @@
 body {
     margin: 20px;
+    padding-bottom: 100px;
 }
 
 form {
-    width: 650px;
+    width: 650px !important;
     margin-left: auto;
     margin-right: auto;
 }
@@ -17,14 +18,16 @@ form {
     width: 550px;
     height: 150px;
     padding: 10px;
-    border: 1px solid rgb(0, 0, 0);
-    font-size: 10px;
+    font-size: 9px;
+    letter-spacing: 0.25px;
 }
 
-img {
+.sig-image {
     display: block;
     height: 35px;
     width: 250px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #p-email {
@@ -32,18 +35,20 @@ img {
     color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
 }
 
-#roksit {
+.sig-website {
     text-decoration: underline;
-    color: black;
+    color: #13112f;
+    margin-top: auto;
 }
 
 .vlg {
-    border-right: 6px solid green;
+    border-left: 6px solid #2db059;
+    height: 100px;
     margin: 0 10px;
 }
 
 .vlb {
-    border-right: 6px solid rgb(1, 5, 1);
+    border-left: 6px solid #13112f;
     height: 20px;
     margin-top: 10px;
     margin-left: 10px;
@@ -55,22 +60,34 @@ img {
 }
 
 #p-name {
-    font-weight: 900 !important;
+    font-weight: 900;
 }
 
-#p-title {
-    font-weight: 500 !important;
+#p-title,
+#p-email,
+#p-telephone,
+#p-telephone-other,
+.sig-divider,
+.address {
+    font-weight: 500;
 }
 
 #p-telephone,
 #p-telephone-other,
-.address {
-    color: grey;
+.address,
+.sig-divider {
+    color: #9c9d9f;
 }
 
 .signature {
     background-color: white;
     font-family: 'Red Hat Display', sans-serif;
+}
+
+h2 {
+    font-family: 'Red Hat Display', sans-serif;
+    text-shadow: 2px;
+    text-shadow: 1px 1px 1px rgb(28, 43, 175);
 }
 
 .signature-cell {
@@ -88,4 +105,14 @@ img {
 .empty-rightside {
     flex: 1;
     display: flex;
+}
+
+input::placeholder {
+    font-size: 15px;
+    font-style: italic;
+}
+
+.myImg {
+    max-width: 100%;
+    margin-top: 10px;
 }
