@@ -142,7 +142,7 @@ downloadButton.addEventListener('click', function () {
     htmlToImage.toJpeg(document.querySelector('.signature'), { quality: 1 })
         .then(function (dataUrl) {
             var link = document.createElement('a');
-            link.download = `${nameSurname.value}_signature.jpeg`;
+            link.download = `${nameSurname.value}_signature.png`;
             link.href = dataUrl;
             link.click();
         });
@@ -161,12 +161,12 @@ deleteButton.addEventListener('click', function () {
     pAdres.innerText = "";
 });
 
-// Banner Delete Event
-const bannerDeleteButton = document.querySelector('#banner-delete-button');
-bannerDeleteButton.addEventListener('click', function () {
-    const myImg = document.querySelector('.myImg');
-    myImg.remove();
-});
+// // Banner Delete Event (no need anymore)
+// const bannerDeleteButton = document.querySelector('#banner-delete-button');
+// bannerDeleteButton.addEventListener('click', function () {
+//     const myImg = document.querySelector('.myImg');
+//     myImg.remove();
+// });
 
 // // Logo Delete Event (no need anymore)
 // const logoDeleteButton = document.querySelector('#logo-delete-button');
@@ -182,25 +182,25 @@ bannerDeleteButton.addEventListener('click', function () {
 //     sigWebsite.remove();
 // });
 
-// Banner Create Event
-const addBannerButton = document.querySelector('.add-banner-button');
-const bannerCell = document.querySelector('.banner-cell');
-addBannerButton.addEventListener('click', function () {
-    const newImg = document.createElement('img');
-    newImg.classList.add('myImg');
-    bannerCell.append(newImg);
-});
+// // Banner Create Event (no need anymore)
+// const addBannerButton = document.querySelector('.add-banner-button');
+// const bannerCell = document.querySelector('.banner-cell');
+// addBannerButton.addEventListener('click', function () {
+//     const newImg = document.createElement('img');
+//     newImg.classList.add('myImg');
+//     bannerCell.append(newImg);
+// });
 
-// Load Image Event for Banner
-document.querySelector('input[type="file"]').addEventListener('change', function () {
-    if (this.files && this.files[0]) {
-        var img = document.querySelector('.myImg');
-        const FR = new FileReader();
+// // Load Image Event for Banner (no need anymore)
+// document.querySelector('input[type="file"]').addEventListener('change', function () {
+//     if (this.files && this.files[0]) {
+//         var img = document.querySelector('.myImg');
+//         const FR = new FileReader();
 
-        FR.addEventListener("load", function (evt) {
-            img.src = evt.target.result;
-        });
+//         FR.addEventListener("load", function (evt) {
+//             img.src = evt.target.result;
+//         });
 
-        FR.readAsDataURL(this.files[0]);
-    }
-});
+//         FR.readAsDataURL(this.files[0]);
+//     }
+// });
