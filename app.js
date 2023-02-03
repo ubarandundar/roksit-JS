@@ -122,14 +122,18 @@ downloadButton.addEventListener('click', function () {
 
 // Localstorage GetItem Event
 document.addEventListener('DOMContentLoaded', function () {
-    window.localStorage.getItem('employee');
-    const employeeData = nameSurname.value;
-    window.localStorage.getItem('title');
-    window.localStorage.getItem('email');
-    window.localStorage.getItem('telephone');
-    window.localStorage.getItem('telephoneOther');
-    window.localStorage.getItem('address');
-    console.log(nameSurname.value);
+    const employeeData = window.localStorage.getItem('employee');
+    nameSurname.value = employeeData;
+    const titleData = window.localStorage.getItem('title');
+    title.value = titleData;
+    const emailData = window.localStorage.getItem('email');
+    email.value = emailData;
+    const telephoneData = window.localStorage.getItem('telephone');
+    telephone.value = telephoneData;
+    const telephoneOtherData = window.localStorage.getItem('telephoneOther');
+    telephoneOther.value = telephoneOtherData;
+    const addressData = window.localStorage.getItem('address');
+    adres.value = addressData;
 });
 
 // Radio Buttons Selection (can made in JS if requested)
