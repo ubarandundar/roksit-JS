@@ -110,12 +110,27 @@ deleteButton.addEventListener('click', function () {
 });
 
 
-// // Localstorage Event
-// const employer = { namesurname: `${nameSurname.value}` }
-// window.localStorage.setItem('employer', JSON.stringify(employer))
-// const data = window.localStorage.getItem('employer')
-// console.log(localStorage.getItem('employer'));
+// Localstorage SetItem Event
+downloadButton.addEventListener('click', function () {
+    window.localStorage.setItem('employee', nameSurname.value);
+    window.localStorage.setItem('title', title.value);
+    window.localStorage.setItem('email', email.value);
+    window.localStorage.setItem('telephone', telephone.value);
+    window.localStorage.setItem('telephoneOther', telephoneOther.value);
+    window.localStorage.setItem('address', adres.value);
+});
 
+// Localstorage GetItem Event
+document.addEventListener('DOMContentLoaded', function () {
+    window.localStorage.getItem('employee');
+    const employeeData = nameSurname.value;
+    window.localStorage.getItem('title');
+    window.localStorage.getItem('email');
+    window.localStorage.getItem('telephone');
+    window.localStorage.getItem('telephoneOther');
+    window.localStorage.getItem('address');
+    console.log(nameSurname.value);
+});
 
 // Radio Buttons Selection (can made in JS if requested)
 // const formCheckInput = document.querySelector('.form-check-input');
