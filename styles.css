@@ -9,7 +9,7 @@ form {
     margin-right: auto;
 }
 
-.h2 {
+.sig-second-title {
     margin-top: 50px;
 }
 
@@ -42,13 +42,15 @@ form {
 }
 
 .vlg {
-    border-left: 6px solid #2db059;
+    border-left: 5px solid #2db059;
+    border-radius: 5px;
     height: 100px;
     margin: 0 10px;
 }
 
 .vlb {
-    border-left: 6px solid #13112f;
+    border-left: 5px solid #13112f;
+    border-radius: 5px;
     height: 20px;
     margin-top: 10px;
     margin-left: 10px;
@@ -84,7 +86,7 @@ form {
     font-family: 'Red Hat Display', sans-serif;
 }
 
-h2 {
+h3 {
     font-family: 'Red Hat Display', sans-serif;
     text-shadow: 2px;
     text-shadow: 1px 1px 1px rgb(28, 43, 175);
@@ -112,7 +114,7 @@ input::placeholder {
     font-style: italic;
 }
 
-.myImg {
+/* .myImg {
     max-width: 100%;
     margin-top: 10px;
-}
+} */
