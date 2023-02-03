@@ -32,24 +32,24 @@ form {
 
 #p-email {
     text-decoration: underline;
-    color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+    color: #0000EE;
 }
 
 .sig-website {
     text-decoration: underline;
-    color: #13112f;
+    color: #12132f;
     margin-top: auto;
 }
 
 .vlg {
-    border-left: 5px solid #2db059;
+    border-left: 5px solid #09ad5a;
     border-radius: 5px;
     height: 100px;
     margin: 0 10px;
 }
 
 .vlb {
-    border-left: 5px solid #13112f;
+    border-left: 5px solid #12132f;
     border-radius: 5px;
     height: 20px;
     margin-top: 10px;
@@ -78,7 +78,7 @@ form {
 #p-telephone-other,
 .address,
 .sig-divider {
-    color: #9c9d9f;
+    color: #929496;
 }
 
 .signature {
