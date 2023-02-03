@@ -4,7 +4,6 @@ body {
 }
 
 form {
-    width: 650px !important;
     margin-left: auto;
     margin-right: auto;
 }
@@ -117,7 +116,8 @@ input::placeholder {
     font-style: italic;
 }
 
-/* .myImg {
-    max-width: 100%;
-    margin-top: 10px;
-} */
+@media (min-width: 768px) {
+    .main-form-sub {
+        width: 650px;
+    }
+}
