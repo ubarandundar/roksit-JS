@@ -14,11 +14,12 @@ form {
 
 .view {
     margin-bottom: 20px;
-    width: 300px;
+    width: 270px;
     /* width: 430px; */
+    /* height: 150px; */
     height: 150px;
     padding: 10px;
-    font-size: 8px;
+    font-size: 7px;
     /* font-size: 9px; */
     letter-spacing: 0.25px;
 }
