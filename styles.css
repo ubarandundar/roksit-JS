@@ -14,18 +14,32 @@ form {
 
 .view {
     margin-bottom: 20px;
-    width: 300px;
+    width: 430px;
     /* width: 430px; */
-    height: 150px;
+    /* height: 150px; */
+    height: 180px;
     padding: 10px;
-    font-size: 8px;
+    /* font-size: 12px; */
     /* font-size: 9px; */
     letter-spacing: 0.25px;
 }
 
+#p-name,
+#p-title {
+    font-size: 13px;
+}
+
+#p-email,
+#p-telephone,
+#p-telephone-other,
+#p-adres,
+.sig-website {
+    font-size: 11px;
+}
+
 .sig-image {
     display: block;
-    width: 100%;
+    width: 200px;
     margin-left: auto;
     /* margin-right: auto; */
 }
@@ -44,7 +58,7 @@ form {
 .vlg {
     border-left: 2px solid #09ad5a;
     border-radius: 5px;
-    height: 100px;
+    height: 110px;
     margin: 0 10px;
 }
 
