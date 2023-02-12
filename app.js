@@ -84,8 +84,6 @@ sigDNSSenseRadio.addEventListener('change', function () {
 });
 
 // Download Event
-// const sig = document.querySelector('.signature')
-// sig.closest('div').style.transform = 'scale(2)';
 const downloadButton = document.querySelector('.download');
 downloadButton.addEventListener('click', function () {
     htmlToImage.toJpeg(document.querySelector('.signature'), { quality: 1 })
@@ -96,6 +94,9 @@ downloadButton.addEventListener('click', function () {
             link.click();
         });
 });
+// const sig = document.querySelector('.signature')
+// sig.closest('div').style.transform = 'scale(2)';
+
 
 // Form Reset Event
 const deleteButton = document.querySelector('#delete-button');
