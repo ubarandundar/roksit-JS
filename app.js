@@ -84,19 +84,31 @@ sigDNSSenseRadio.addEventListener('change', function () {
 });
 
 // Download Event
+function downloadImage(base64, fileName) {
+    var link = document.createElement('a');
+    link.download = fileName;
+    link.href = base64;
+    link.click();
+}
+
+// Download Event
 const downloadButton = document.querySelector('.download');
+const signatureArea = document.querySelector(".signature");
 downloadButton.addEventListener('click', function () {
-    htmlToImage.toJpeg(document.querySelector('.signature'), { quality: 1 })
-        .then(function (dataUrl) {
-            var link = document.createElement('a');
-            link.download = `${nameSurname.value}_signature.png`;
-            link.href = dataUrl;
-            link.click();
+    const signatureWidth = 404;
+    const signatureHeight = 140;
+    const options = {
+        quality: 1,
+        canvasWidth: signatureWidth,
+        canvasHeight: signatureHeight,
+        skipAutoScale: true,
+        pixelRatio: 1
+    }
+    htmlToImage.toJpeg(signatureArea, options)
+        .then(async function (dataUrl) {
+            downloadImage(dataUrl, `${nameSurname.value}_signature.png`);
         });
 });
-// const sig = document.querySelector('.signature')
-// sig.closest('div').style.transform = 'scale(2)';
-
 
 // Form Reset Event
 const deleteButton = document.querySelector('#delete-button');
@@ -135,6 +147,15 @@ document.addEventListener('DOMContentLoaded', function () {
     telephoneOther.value = telephoneOtherData;
     const addressData = window.localStorage.getItem('address');
     adres.value = addressData;
+    mainForm.querySelectorAll("input, select").forEach(e => {
+        // trigger change evt for selects
+        var evt = document.createEvent("HTMLEvents");
+        evt.initEvent("change", false, true);
+        e.dispatchEvent(evt);
+        // trigger input evt for selects
+        evt.initEvent("input", false, true);
+        e.dispatchEvent(evt);
+    })
 });
 
 // Radio Buttons Selection (can made in JS if requested)
