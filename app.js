@@ -95,8 +95,8 @@ function downloadImage(base64, fileName) {
 const downloadButton = document.querySelector('.download');
 const signatureArea = document.querySelector(".signature");
 downloadButton.addEventListener('click', function () {
-    const signatureWidth = 430;
-    const signatureHeight = 180;
+    const signatureWidth = 440;
+    const signatureHeight = 190;
     const options = {
         quality: 1,
         canvasWidth: signatureWidth,

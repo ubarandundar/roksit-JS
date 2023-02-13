@@ -14,16 +14,17 @@ form {
 
 .view {
     margin-bottom: 20px;
-    width: 430px;
+    width: 440px;
     height: 220px;
     padding: 10px;
-    letter-spacing: 0.25px;
+    /* letter-spacing: 0.25px; */
     line-height: 1.4rem;
 }
 
 #p-name,
 #p-title {
     font-size: 13px;
+    color: #141530;
 }
 
 #p-email,
@@ -31,7 +32,7 @@ form {
 #p-telephone-other,
 #p-adres,
 .sig-website {
-    font-size: 11px;
+    font-size: 12px;
 }
 
 .sig-image {
@@ -42,8 +43,8 @@ form {
 }
 
 #p-email {
-    text-decoration: underline;
-    color: #0000EE;
+    text-decoration: none;
+    color: #15c;
 }
 
 .sig-website {
@@ -53,14 +54,14 @@ form {
 }
 
 .vlg {
-    border-left: 2px solid #09ad5a;
+    border-left: 3px solid #09ad5a;
     border-radius: 5px;
     height: 140px;
     margin: 0 10px;
 }
 
 .vlb {
-    border-left: 2px solid #12132f;
+    border-left: 3px solid #12132f;
     border-radius: 5px;
     height: 20px;
     margin-top: 10px;
@@ -89,7 +90,7 @@ form {
 #p-telephone-other,
 .address,
 .sig-divider {
-    color: #9c9d9f;
+    color: #929496;
 }
 
 .signature {
