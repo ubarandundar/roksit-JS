@@ -83,7 +83,7 @@ sigDNSSenseRadio.addEventListener('change', function () {
     emptyRightSide.append(webSite);
 });
 
-// Download Event
+// Download Event1
 function downloadImage(base64, fileName) {
     var link = document.createElement('a');
     link.download = fileName;
@@ -91,7 +91,7 @@ function downloadImage(base64, fileName) {
     link.click();
 }
 
-// Download Event
+// Download Event2
 const downloadButton = document.querySelector('.download');
 const signatureArea = document.querySelector(".signature");
 downloadButton.addEventListener('click', function () {
