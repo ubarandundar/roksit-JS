@@ -11,5 +11,6 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
         server: 78.135.107.53
-        username: admin_baran_github_action
-        password: wBMjx@J*cqy3#Kf7
+        local-dir: ./public_html/
+        username: admin_sign
+        password: 8Ifq4Bmd@9KEozIw
