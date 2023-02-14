@@ -160,14 +160,14 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// Banner Delete Event (no need anymore)
+// Banner Delete Event (optinal)
 // const bannerDeleteButton = document.querySelector('#banner-delete-button');
 // bannerDeleteButton.addEventListener('click', function () {
 //     const myImg = document.querySelector('.myImg');
 //     myImg.remove();
 // });
 
-// Banner Create Event (no need anymore)
+// Banner Create Event (optional)
 // const addBannerButton = document.querySelector('.add-banner-button');
 // const bannerCell = document.querySelector('.banner-cell');
 // addBannerButton.addEventListener('click', function () {
@@ -176,21 +176,19 @@ document.addEventListener('DOMContentLoaded', function () {
 //     bannerCell.append(newImg);
 // });
 
-// Load Image Event for Banner (no need anymore)
+// Load Image Event for Banner (optional)
 // document.querySelector('input[type="file"]').addEventListener('change', function () {
 //     if (this.files && this.files[0]) {
 //         var img = document.querySelector('.myImg');
 //         const FR = new FileReader();
-
 //         FR.addEventListener("load", function (evt) {
 //             img.src = evt.target.result;
 //         });
-
 //         FR.readAsDataURL(this.files[0]);
 //     }
 // });
 
-// HTML for Banner Events
+// HTML for Banner Events (optional)
 // Add Banner Button
 // <div>
 // <input type="file" class="form-control add-banner-button" accept="image/jpeg, image/png, image/jpg"
