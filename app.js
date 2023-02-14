@@ -159,85 +159,15 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 });
 
-// Radio Buttons Selection (can made in JS if requested)
-// const formCheckInput = document.querySelector('.form-check-input');
-// const radioButtons = document.querySelectorAll('input[name="company"]');
-// formCheckInput.addEventListener("click", () => {
-//     let selectedCompany;
-//     for (const radioButton of radioButtons) {
-//         if (radioButton.checked) {
-//             selectedCompany = radioButton.value;
-//             break;
-//         }
-//     }
-// });
 
-
-// // Roksit and DNSSense Add Website Adress Event (related to dropdown menu)
-// const emptyRightSide = document.querySelector('.empty-rightside');
-// company.addEventListener('change', function () {
-//     const sigWebsite = document.querySelector('.sig-website');
-//     if (sigWebsite) {
-//         sigWebsite.remove();
-//     } if (this.value === 'Roksit') {
-//         const webSite = document.createElement('div');
-//         webSite.classList.add('sig-website');
-//         webSite.innerText = 'www.roksit.com';
-//         emptyRightSide.append(webSite);
-//     } else if (this.value === 'DNSSense') {
-//         const webSite = document.createElement('div');
-//         webSite.classList.add('sig-website');
-//         webSite.innerText = 'www.dnssense.com';
-//         emptyRightSide.append(webSite);
-//     }
-// });
-
-
-// // Roksit and DNSSense Create Image Event (related to dropdown menu)
-// const company = document.querySelector('#firma');
-// const sigFigure = document.querySelector('#sig-figure');
-// company.addEventListener('change', function () {
-//     const sigImg = document.querySelector('.sig-image');
-//     if (sigImg) {
-//         sigImg.remove();
-//     } if (this.value === 'Roksit') {
-//         const newFigure = document.createElement('img');
-//         newFigure.classList.add('sig-image');
-//         newFigure.setAttribute('src', '/assets/RoksitLogoSlogan.png')
-//         sigFigure.append(newFigure);
-//     } else if (this.value === 'DNSSense') {
-//         const newFigure = document.createElement('img');
-//         newFigure.classList.add('sig-image');
-//         newFigure.setAttribute('src', '/assets/DNSSenseLogo.svg')
-//         sigFigure.append(newFigure);
-//     }
-// });
-
-// // Banner Delete Event (no need anymore)
+// Banner Delete Event (no need anymore)
 // const bannerDeleteButton = document.querySelector('#banner-delete-button');
 // bannerDeleteButton.addEventListener('click', function () {
 //     const myImg = document.querySelector('.myImg');
 //     myImg.remove();
 // });
 
-
-// // Logo Delete Event (no need anymore)
-// const logoDeleteButton = document.querySelector('#logo-delete-button');
-// logoDeleteButton.addEventListener('click', function () {
-//     const sigImg = document.querySelector('.sig-image');
-//     sigImg.remove();
-// });
-
-
-// // Website Delete Event (no need anymore)
-// const websiteDeleteButton = document.querySelector('#website-delete-button');
-// websiteDeleteButton.addEventListener('click', function () {
-//     const sigWebsite = document.querySelector('.sig-website');
-//     sigWebsite.remove();
-// });
-
-
-// // Banner Create Event (no need anymore)
+// Banner Create Event (no need anymore)
 // const addBannerButton = document.querySelector('.add-banner-button');
 // const bannerCell = document.querySelector('.banner-cell');
 // addBannerButton.addEventListener('click', function () {
@@ -246,8 +176,7 @@ document.addEventListener('DOMContentLoaded', function () {
 //     bannerCell.append(newImg);
 // });
 
-
-// // Load Image Event for Banner (no need anymore)
+// Load Image Event for Banner (no need anymore)
 // document.querySelector('input[type="file"]').addEventListener('change', function () {
 //     if (this.files && this.files[0]) {
 //         var img = document.querySelector('.myImg');
@@ -260,3 +189,14 @@ document.addEventListener('DOMContentLoaded', function () {
 //         FR.readAsDataURL(this.files[0]);
 //     }
 // });
+
+// HTML for Banner Events
+// Add Banner Button
+// <div>
+// <input type="file" class="form-control add-banner-button" accept="image/jpeg, image/png, image/jpg"
+//     id="input-file" />
+// <div id="emailHelp" class="form-text">Banner eklemek için bir dosya seçiniz.</div>
+// </div>
+// <br> 
+// Delete Banner Button
+// <button type="button" class="btn btn-secondary mt-2" id="banner-delete-button">Banner'ı Sil</button>

@@ -37,6 +37,9 @@ input::placeholder {
 #p-title {
     font-size: 13px;
     color: #141530;
+    overflow: hidden;
+    text-overflow: clip;
+    width: 280px;
 }
 
 #p-email,
@@ -76,6 +79,10 @@ input::placeholder {
 .address,
 .sig-divider {
     color: #929496;
+}
+
+#p-adres {
+    width: 170px;
 }
 
 .address {
@@ -120,6 +127,7 @@ h3 {
     flex: 0.8;
     justify-content: end;
     display: flex;
+    min-width: 220px;
 }
 
 .description-cell {
@@ -131,17 +139,10 @@ h3 {
     /* flex: 1.3; */
     flex: 0.8;
     display: flex;
+    min-width: 220px;
 }
 
 .empty-rightside {
     flex: 1;
     display: flex;
 }
-
-#p-adres {
-    width: 170px;
-}
-
-/* #decription-cell {
-    width: 264px;
-} */
