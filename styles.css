@@ -1,3 +1,9 @@
+@media (min-width: 768px) {
+    .main-form-sub {
+        width: 650px;
+    }
+}
+
 body {
     margin: 20px;
     padding-bottom: 100px;
@@ -8,17 +14,23 @@ form {
     margin-right: auto;
 }
 
+input::placeholder {
+    font-size: 15px;
+    font-style: italic;
+}
+
 .sig-second-title {
     margin-top: 50px;
 }
 
 .view {
     margin-bottom: 20px;
-    width: 440px;
+    /* width: 440px; */
+    width: auto;
     height: 220px;
     padding: 10px;
-    /* letter-spacing: 0.25px; */
     line-height: 1.4rem;
+    max-width: 520px;
 }
 
 #p-name,
@@ -35,13 +47,6 @@ form {
     font-size: 12px;
 }
 
-.sig-image {
-    display: block;
-    width: 200px;
-    margin-left: auto;
-    /* margin-right: auto; */
-}
-
 #p-email {
     text-decoration: none;
     color: #15c;
@@ -51,26 +56,6 @@ form {
     text-decoration: underline;
     color: #12132f;
     margin-top: 8px;
-}
-
-.vlg {
-    border-left: 3px solid #09ad5a;
-    border-radius: 5px;
-    height: 140px;
-    margin: 0 10px;
-}
-
-.vlb {
-    border-left: 3px solid #12132f;
-    border-radius: 5px;
-    height: 20px;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.address {
-    display: inline-block;
 }
 
 #p-name {
@@ -93,6 +78,32 @@ form {
     color: #929496;
 }
 
+.address {
+    display: inline-block;
+}
+
+.sig-image {
+    display: block;
+    width: 200px;
+    margin-left: auto;
+}
+
+.vlg {
+    border-left: 3px solid #09ad5a;
+    border-radius: 5px;
+    height: 140px;
+    margin: 0 10px;
+}
+
+.vlb {
+    border-left: 3px solid #12132f;
+    border-radius: 5px;
+    height: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 .signature {
     background-color: white;
     font-family: 'Red Hat Display', sans-serif;
@@ -105,8 +116,8 @@ h3 {
 }
 
 .signature-cell {
-    flex: 1.3;
-    /* flex: 1.5; */
+    /* flex: 1.3; */
+    flex: 0.8;
     justify-content: end;
     display: flex;
 }
@@ -117,8 +128,8 @@ h3 {
 }
 
 .empty-leftside {
-    flex: 1.3;
-    /* flex: 1.5; */
+    /* flex: 1.3; */
+    flex: 0.8;
     display: flex;
 }
 
@@ -127,13 +138,10 @@ h3 {
     display: flex;
 }
 
-input::placeholder {
-    font-size: 15px;
-    font-style: italic;
+#p-adres {
+    width: 170px;
 }
 
-@media (min-width: 768px) {
-    .main-form-sub {
-        width: 650px;
-    }
-}
+/* #decription-cell {
+    width: 264px;
+} */
