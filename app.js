@@ -32,6 +32,11 @@ telephoneOther.addEventListener('input', function () {
 const adres = document.querySelector('#adres');
 const pAdres = document.querySelector('#p-adres');
 adres.addEventListener('input', function () {
+    if (this.value.includes('Manhattan')) {
+        const [first, second] = this.value.split(',');
+        pAdres.innerHTML = `${first},<br>${second}`;
+        return;
+    }
     pAdres.innerText = this.value;
 });
 
@@ -96,20 +101,74 @@ const downloadButton = document.querySelector('.download');
 const signatureArea = document.querySelector(".signature");
 downloadButton.addEventListener('click', function () {
     // const signatureWidth = 440;
-    const signatureWidth = 520;
-    const signatureHeight = 190;
+    const signatureWidth = 508; 
+    const signatureHeight = 195;
     const options = {
         quality: 1,
-        canvasWidth: signatureWidth,
-        canvasHeight: signatureHeight,
+        canvasWidth: signatureWidth * 1.1,
+        canvasHeight: signatureHeight * 1.1,
         skipAutoScale: true,
         pixelRatio: 1
     }
     htmlToImage.toJpeg(signatureArea, options)
         .then(async function (dataUrl) {
-            downloadImage(dataUrl, `${nameSurname.value}_signature.png`);
+            downloadImage(dataUrl, `${nameSurname.value}_signature.jpeg`);
         });
 });
+
+// Download Event 2.ALTERNATIVE
+// function generateHTMLSig(imgUrl) {
+//     return `<head>
+//     <meta charset="utf-8">
+//    </head>
+    
+//    <table border="0" cellpadding="0" cellspacing="0" width="520">
+//      <tbody>
+//        <tr>
+//          <td>
+//            <img style="width: 520px;" src="${imgUrl}">
+//          </td>
+//        </tr>
+//      </tbody>
+//    </table>`;
+// }
+
+// // Download Event 2.ALTERNATIVE
+// const downloadButton = document.querySelector('.download');
+// const signatureArea = document.querySelector(".signature");
+// downloadButton.addEventListener('click', function () {
+//     // const signatureWidth = 440;
+//     const signatureWidth = 520;
+//     const signatureHeight = 190;
+//     const options = {
+//         quality: 1,
+//         canvasWidth: signatureWidth,
+//         canvasHeight: signatureHeight,
+//         skipAutoScale: true,
+//         pixelRatio: 3
+//     }
+//     htmlToImage.toPng(signatureArea, options)
+//         .then(function (dataUrl) {
+//             var link = document.createElement('a');
+//             link.download = 'filename.htm';
+//             link.href = 'data:text/html;charset=UTF-8,' + encodeURIComponent(generateHTMLSig(dataUrl))
+//             link.click();
+//         });
+// });
+
+// // Download Event 3.ALTERNATIVE
+// const downloadButton = document.querySelector('.download');
+// const signatureArea = document.querySelector(".signature");
+// downloadButton.addEventListener('click', function () {
+//     html2canvas(signatureArea).then((canvas) => {
+//         const base64image = canvas.toDataURL('image/png');
+//         let anchor = document.createElement('a');
+//         anchor.setAttribute('href', base64image);
+//         anchor.setAttribute('download', 'my-image.png');
+//         anchor.click();
+//         anchor.remove();
+//     });
+// });
 
 // Form Reset Event
 const deleteButton = document.querySelector('#delete-button');

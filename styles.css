@@ -29,12 +29,12 @@ input::placeholder {
     height: 220px;
     padding: 10px;
     line-height: 1.4rem;
-    max-width: 520px;
+    max-width: 530px;
 }
 
 #p-name,
 #p-title {
-    font-size: 13px;
+    font-size: 14px;
     color: #141530;
     overflow: hidden;
     text-overflow: clip;
@@ -46,7 +46,7 @@ input::placeholder {
 #p-telephone-other,
 #p-adres,
 .sig-website {
-    font-size: 12px;
+    font-size: 13px;
 }
 
 #p-email {
@@ -74,14 +74,19 @@ input::placeholder {
 }
 
 #p-telephone,
+#p-telephone-other {
+    letter-spacing: 0.6px;
+}
+
+#p-telephone,
 #p-telephone-other,
 .address,
 .sig-divider {
-    color: #929496;
+    color: #7a7b7d;
 }
 
 #p-adres {
-    width: 170px;
+    width: 220px;
 }
 
 .address {
@@ -113,6 +118,7 @@ input::placeholder {
 .signature {
     background-color: white;
     font-family: 'Red Hat Display', sans-serif;
+    height: 195px;
 }
 
 h3 {
