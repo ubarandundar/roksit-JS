@@ -49,7 +49,8 @@ sigRoksitRadio.addEventListener('change', function () {
         sigImg.remove();
     } const newFigure = document.createElement('img');
     newFigure.classList.add('sig-image');
-    newFigure.setAttribute('src', '/assets/RoksitLogoSlogan.png')
+    // newFigure.setAttribute('src', '/assets/RoksitLogoSlogan.png')
+    newFigure.setAttribute('src', '/assets/dnssense-formerlyRoksit.png')
     sigFigure.append(newFigure);
 });
 
