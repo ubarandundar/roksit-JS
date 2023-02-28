@@ -127,6 +127,10 @@ h3 {
     text-shadow: 1px 1px 1px rgb(28, 43, 175);
 }
 
+.formerly {
+    font-size: 0.59rem;
+}
+
 .signature-cell {
     flex: 0.8;
     justify-content:flex-end;
