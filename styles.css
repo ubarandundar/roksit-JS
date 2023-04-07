@@ -6,12 +6,15 @@
 
 body {
     margin: 20px;
-    padding-bottom: 100px;
 }
 
 form {
     margin-left: auto;
     margin-right: auto;
+}
+
+.form-control, .form-check-input {
+    border: var(--bs-border-width) solid #a1b4c7 !important;
 }
 
 input::placeholder {
@@ -127,10 +130,6 @@ h3 {
     text-shadow: 1px 1px 1px rgb(28, 43, 175);
 }
 
-.formerly {
-    font-size: 0.59rem;
-}
-
 .signature-cell {
     flex: 0.8;
     justify-content:flex-end;
@@ -152,4 +151,30 @@ h3 {
 .empty-rightside {
     flex: 1;
     display: flex;
+}
+
+.btn-danger, .btn-success {
+    width: 150px;
+}
+
+.signature-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.footer-copyright {
+    font-weight: 500;
+}
+
+.crosstech {
+    margin-left: 5px ;
+    font-weight: 600;
+    color: #1294d5;
+    text-decoration: none;
+}
+
+.labels-fw {
+    font-weight: 600;
 }

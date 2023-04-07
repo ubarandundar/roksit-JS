@@ -50,7 +50,7 @@ sigRoksitRadio.addEventListener('change', function () {
     } const newFigure = document.createElement('img');
     newFigure.classList.add('sig-image');
     // newFigure.setAttribute('src', '/assets/RoksitLogoSlogan.png')
-    newFigure.setAttribute('src', '/assets/dnssense-formerlyRoksit.png')
+    newFigure.setAttribute('src', '/assets/dnssense-formerly.png')
     sigFigure.append(newFigure);
 });
 
@@ -62,7 +62,7 @@ sigDNSSenseRadio.addEventListener('change', function () {
         sigImg.remove();
     } const newFigure = document.createElement('img');
     newFigure.classList.add('sig-image');
-    newFigure.setAttribute('src', '/assets/DNSSenseLogo.svg')
+    newFigure.setAttribute('src', '/assets/DNSSenseLogo.png')
     sigFigure.append(newFigure);
 });
 
