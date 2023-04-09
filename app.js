@@ -102,9 +102,14 @@ function downloadImage(base64, fileName) {
 const downloadButton = document.querySelector('.download');
 const signatureArea = document.querySelector(".signature");
 downloadButton.addEventListener('click', function () {
-    // const signatureWidth = 440;
-    const signatureWidth = 508; 
-    const signatureHeight = 195;
+    signatureArea.classList.remove('form-control');
+    const signatureWidth = 508;
+    const signatureHeight = {first: 325, second: 195};
+    if (bannerCell !== '') {
+        signatureHeight.first;
+    } else {
+        signatureHeight.second;
+    }
     const options = {
         quality: 1,
         canvasWidth: signatureWidth * 1.1,
@@ -222,40 +227,68 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // Banner Delete Event (optinal)
-// const bannerDeleteButton = document.querySelector('#banner-delete-button');
-// bannerDeleteButton.addEventListener('click', function () {
-//     const myImg = document.querySelector('.myImg');
-//     myImg.remove();
-// });
+const bannerDeleteButton = document.querySelector('#banner-delete-button');
+bannerDeleteButton.addEventListener('click', function () {
+    const myImg = document.querySelector('.form-banner');
+    myImg.remove();
+    inputFile.value = '';
+    viewArea.classList.add('form-control');
+    signatureArea.classList.remove('form-control');
+    signatureArea.style.height = '195px';
+    inputFile.disabled = false;
+    inputFile.style.cursor = 'auto';
+});
 
 // Banner Create Event (optional)
-// const addBannerButton = document.querySelector('.add-banner-button');
-// const bannerCell = document.querySelector('.banner-cell');
-// addBannerButton.addEventListener('click', function () {
-//     const newImg = document.createElement('img');
-//     newImg.classList.add('myImg');
-//     bannerCell.append(newImg);
-// });
+const addBannerButton = document.querySelector('.add-banner-button');
+const bannerCell = document.querySelector('.banner-cell');
+addBannerButton.addEventListener('click', function () {
+    const newImg = document.createElement('img');
+    newImg.classList.add('form-banner');
+    bannerCell.append(newImg);
+    viewArea.classList.remove('form-control');
+    signatureArea.classList.add('form-control');
+    signatureArea.style.height = '325px';
+});
 
 // Load Image Event for Banner (optional)
-// document.querySelector('input[type="file"]').addEventListener('change', function () {
-//     if (this.files && this.files[0]) {
-//         var img = document.querySelector('.myImg');
-//         const FR = new FileReader();
-//         FR.addEventListener("load", function (evt) {
-//             img.src = evt.target.result;
-//         });
-//         FR.readAsDataURL(this.files[0]);
-//     }
-// });
+const viewArea = document.querySelector('.view');
+document.querySelector('input[type="file"]').addEventListener('change', function () {
+    if (this.files && this.files[0]) {
+        var img = document.querySelector('.form-banner');
+        const FR = new FileReader();
+        FR.addEventListener("load", function (evt) {
+            img.src = evt.target.result;
+        });
+        FR.readAsDataURL(this.files[0]);
+    }
+    if (inputFile.value !== '') {
+        inputFile.disabled = true;
+        inputFile.style.cursor = 'not-allowed';
+    };
+});
 
-// HTML for Banner Events (optional)
-// Add Banner Button
-// <div>
-// <input type="file" class="form-control add-banner-button" accept="image/jpeg, image/png, image/jpg"
-//     id="input-file" />
-// <div id="emailHelp" class="form-text">Banner eklemek için bir dosya seçiniz.</div>
-// </div>
-// <br> 
-// Delete Banner Button
-// <button type="button" class="btn btn-secondary mt-2" id="banner-delete-button">Banner'ı Sil</button>
+const formBanner = document.querySelector('.form-banner');
+const inputFile = document.querySelector('#input-file');
+function initialize()
+{
+    document.body.onfocus = checkIt;
+}
+    
+function checkIt()
+{
+    if (inputFile.value.length !== 0) {
+        console.log ('File Loaded!');
+    }
+    else {
+        // if (formBanner.getAttribute('src') === '') {
+        //     formBanner.remove();
+        // }
+        // bannerCell.removeChild(formBanner);
+        console.log ('File not Loaded!');
+        viewArea.classList.add('form-control');
+        signatureArea.classList.remove('form-control');
+        signatureArea.style.height = '195px';
+        document.body.onfocus = null;
+    }
+}	
