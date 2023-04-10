@@ -104,12 +104,14 @@ const signatureArea = document.querySelector(".signature");
 downloadButton.addEventListener('click', function () {
     signatureArea.classList.remove('form-control');
     const signatureWidth = 508;
-    const signatureHeight = {first: 325, second: 195};
-    if (bannerCell !== '') {
-        signatureHeight.first;
-    } else {
-        signatureHeight.second;
-    }
+    const signatureHeight = 345;
+    // const signatureHeight = 325;
+    // const signatureHeight = {first: 325, second: 195};
+    // if (bannerCell !== '') {
+    //     signatureHeight.first;
+    // } else {
+    //     signatureHeight.second;
+    // }
     const options = {
         quality: 1,
         canvasWidth: signatureWidth * 1.1,
@@ -134,6 +136,7 @@ deleteButton.addEventListener('click', function () {
     pTelephone.innerText = "";
     pTelephoneOther.innerText = "";
     pAdres.innerText = "";
+    signatureArea.classList.add('form-control');
 });
 
 // Localstorage SetItem Event
@@ -173,77 +176,68 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // Banner Delete Event (optinal)
-const bannerDeleteButton = document.querySelector('#banner-delete-button');
-bannerDeleteButton.addEventListener('click', function () {
-    const myImg = document.querySelector('.form-banner');
-    myImg.remove();
-    inputFile.value = '';
-    viewArea.classList.add('form-control');
-    signatureArea.classList.remove('form-control');
-    signatureArea.style.height = '195px';
-    inputFile.disabled = false;
-    inputFile.style.cursor = 'auto';
-});
+// const bannerDeleteButton = document.querySelector('#banner-delete-button');
+// bannerDeleteButton.addEventListener('click', function () {
+//     const myImg = document.querySelector('.form-banner');
+//     myImg.remove();
+//     inputFile.value = '';
+//     viewArea.classList.add('form-control');
+//     signatureArea.classList.remove('form-control');
+//     signatureArea.style.height = '195px';
+//     inputFile.disabled = false;
+//     inputFile.style.cursor = 'auto';
+// });
 
 // Banner Create Event (optional)
-const addBannerButton = document.querySelector('.add-banner-button');
-const bannerCell = document.querySelector('.banner-cell');
-addBannerButton.addEventListener('click', function () {
-    const newImg = document.createElement('img');
-    newImg.classList.add('form-banner');
-    bannerCell.append(newImg);
-    viewArea.classList.remove('form-control');
-    signatureArea.classList.add('form-control');
-    signatureArea.style.height = '325px';
-});
+// const addBannerButton = document.querySelector('.add-banner-button');
+// const bannerCell = document.querySelector('.banner-cell');
+// addBannerButton.addEventListener('click', function () {
+//     const newImg = document.createElement('img');
+//     newImg.classList.add('form-banner');
+//     bannerCell.append(newImg);
+//     viewArea.classList.remove('form-control');
+//     signatureArea.classList.add('form-control');
+//     signatureArea.style.height = '325px';
+// });
 
 // Load Image Event for Banner (optional)
-const viewArea = document.querySelector('.view');
-document.querySelector('input[type="file"]').addEventListener('change', function () {
-    if (this.files && this.files[0]) {
-        var img = document.querySelector('.form-banner');
-        const FR = new FileReader();
-        FR.addEventListener("load", function (evt) {
-            img.src = evt.target.result;
-        });
-        FR.readAsDataURL(this.files[0]);
-    }
-    if (inputFile.value !== '') {
-        inputFile.disabled = true;
-        inputFile.style.cursor = 'not-allowed';
-    };
-});
+// const viewArea = document.querySelector('.view');
+// document.querySelector('input[type="file"]').addEventListener('change', function () {
+//     if (this.files && this.files[0]) {
+//         var img = document.querySelector('.form-banner');
+//         const FR = new FileReader();
+//         FR.addEventListener("load", function (evt) {
+//             img.src = evt.target.result;
+//         });
+//         FR.readAsDataURL(this.files[0]);
+//     }
+//     if (inputFile.value !== '') {
+//         inputFile.disabled = true;
+//         inputFile.style.cursor = 'not-allowed';
+//     };
+// });
 
 // Input File Change Event
-const inputFile = document.querySelector('#input-file');
-inputFile.addEventListener('change', function () {
-    if (inputFile.value.length !== 0) {
-        console.log ('File Loaded!');
-        viewArea.classList.remove('form-control');
-        signatureArea.classList.add('form-control');
-        signatureArea.style.height = '325px';
-    }
-})
+// const inputFile = document.querySelector('#input-file');
+// inputFile.addEventListener('change', function () {
+//     if (inputFile.value.length !== 0) {
+//         console.log ('File Loaded!');
+//         viewArea.classList.remove('form-control');
+//         signatureArea.classList.add('form-control');
+//         signatureArea.style.height = '325px';
+//     }
+// })
 
 // Input File Click Event
-inputFile.addEventListener('click', function () {
-    if (inputFile.value.length === 0) {
-        viewArea.classList.add('form-control');
-        signatureArea.classList.remove('form-control');
-        signatureArea.style.height = '195px';
-    }
-    else {
-        viewArea.classList.remove('form-control');
-        signatureArea.classList.add('form-control');
-        signatureArea.style.height = '325px';
-    }
-})
-
-// Delete Extra Img Event for Banner
-// window.addEventListener('focus', function () {
-//     const formBanner = document.querySelector('.form-banner');
-//     let src = formBanner.getAttribute('src');
-//     if (inputFile.value.length === 0 && !src) {
-//         formBanner.remove();
+// inputFile.addEventListener('click', function () {
+//     if (inputFile.value.length === 0) {
+//         viewArea.classList.add('form-control');
+//         signatureArea.classList.remove('form-control');
+//         signatureArea.style.height = '195px';
+//     }
+//     else {
+//         viewArea.classList.remove('form-control');
+//         signatureArea.classList.add('form-control');
+//         signatureArea.style.height = '325px';
 //     }
 // })

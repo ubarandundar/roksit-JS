@@ -32,7 +32,8 @@ input::placeholder {
     height: 220px;
     padding: 10px;
     line-height: 1.4rem;
-    max-width: 530px;
+    /* max-width: 530px; */
+    max-width: 550px;
 }
 
 #p-name,
@@ -41,7 +42,7 @@ input::placeholder {
     color: #141530;
     overflow: hidden;
     text-overflow: clip;
-    width: 280px;
+    /* width: 280px; */
 }
 
 #p-email,
@@ -88,8 +89,18 @@ input::placeholder {
     color: #7a7b7d;
 }
 
+#p-name,
+#p-title,
+#p-email,
+#p-telephone,
+#p-telephone-other
+{
+    /* width: 220px; */
+    width: 270px;
+}
+
 #p-adres {
-    width: 220px;
+    width: 250px;
 }
 
 .address {
@@ -121,8 +132,9 @@ input::placeholder {
 .signature {
     background-color: white;
     font-family: 'Red Hat Display', sans-serif;
-    height: 195px;
-    /* height: 330px; */
+    /* height: 195px; */
+    /* height: 325px; */
+    height: 345px;
 }
 
 h3 {
@@ -182,10 +194,16 @@ h3 {
 
 .banner-cell {
     margin-top: 10px;
-    height: 120px;
+    /* height: 120px; */
+    height: 125px;
 }
 
-.form-banner {
+/* .form-banner {
+    width: auto;
+    height: auto;
+} */
+
+.banner-img {
     width: auto;
     height: auto;
 }

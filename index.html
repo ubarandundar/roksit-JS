@@ -51,7 +51,7 @@
                 </div>
                 <div class="mb-3 col-sm-6">
                     <label for="title" class="form-label labels-fw">Title</label>
-                    <input type="text" class="form-control required" id="title" placeholder="Title" maxlength="40">
+                    <input type="text" class="form-control required" id="title" placeholder="Title" maxlength="37">
                 </div>
             </div>
             <div class="row">
@@ -78,8 +78,8 @@
                         </option>
                         <option value="Türkiye Istanbul Teknopark Bulv.No:1 2A Blok Kat:2">TÜRKİYE</option>
                         <option value="New York. 112 W 34th St, Manhattan">UNITED STATES</option>
-                        <option value="London, 338a Regents Park Road, Office 3 And 4, N3 2LN">ENGLAND</option>
-                        <option value="Rialto Mews, Marigold Cres, Sandton, 2063, Johannesburg">SOUTH AFRICA</option>
+                        <option value="338a Regents Park Road, Office 3 And 4, N3 2LN London, United Kingdom">ENGLAND</option>
+                        <option value="2nd Floor Block A, 33 Sloane St, Knightsbridge Office Park, Bryanston, Sandton, 2191, Johannesburg, Gauteng">SOUTH AFRICA</option>
                         <option value="49 Fizuli str., «SKS Plaza», Baku, Azerbaijan, AZ1014">AZERBAIJAN</option>
                         <option value="Jubilee Place L 1/470 St Paul Terrace, Fortitude Valley, Brisbane QLD">
                             AUSTRALIA</option>
@@ -88,14 +88,14 @@
                     </select>
                 </div>
             </div>
-            <div class="row">
+            <!-- <div class="row">
                 <div class="mb-3 col-sm-12">
                     <label for="input-file" class="form-label labels-fw">Choose Banner <small>(optional)</small></label>
                     <input type="file" class="form-control add-banner-button" accept="image/jpeg, image/png, image/jpg" id="input-file" />
                 </div>
-            </div>
+            </div> -->
             <button type="button" class="btn btn-danger mt-2" id="delete-button">Reset</button>
-            <button type="button" class="btn btn-secondary mt-2" id="banner-delete-button">Delete Banner</button>
+            <!-- <button type="button" class="btn btn-secondary mt-2" id="banner-delete-button">Delete Banner</button> -->
     </div>
     </form>
     </div>
@@ -107,8 +107,8 @@
     </div>
 
     <!-- PREVIEW -->
-    <div class="view container form-control">
-        <div class="signature">
+    <div class="view container">
+        <div class="signature form-control">
             <div class="d-flex">
                 <div class="signature-cell">
                     <figure id="sig-figure">
@@ -133,7 +133,10 @@
                 <div class="empty-rightside">
                 </div>
             </div>
-            <div class="banner-cell d-flex justify-content-center">
+            <!-- <div class="banner-cell d-flex justify-content-center"> -->
+                <div class="banner-cell d-flex justify-content-center">
+                    <img class="banner-img" src="/assets/banner-05.jpg" />
+                </div>
             </div>
         </div>
     </div>
