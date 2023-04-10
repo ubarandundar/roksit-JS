@@ -123,60 +123,6 @@ downloadButton.addEventListener('click', function () {
         });
 });
 
-// Download Event 2.ALTERNATIVE
-// function generateHTMLSig(imgUrl) {
-//     return `<head>
-//     <meta charset="utf-8">
-//    </head>
-    
-//    <table border="0" cellpadding="0" cellspacing="0" width="520">
-//      <tbody>
-//        <tr>
-//          <td>
-//            <img style="width: 520px;" src="${imgUrl}">
-//          </td>
-//        </tr>
-//      </tbody>
-//    </table>`;
-// }
-
-// // Download Event 2.ALTERNATIVE
-// const downloadButton = document.querySelector('.download');
-// const signatureArea = document.querySelector(".signature");
-// downloadButton.addEventListener('click', function () {
-//     // const signatureWidth = 440;
-//     const signatureWidth = 520;
-//     const signatureHeight = 190;
-//     const options = {
-//         quality: 1,
-//         canvasWidth: signatureWidth,
-//         canvasHeight: signatureHeight,
-//         skipAutoScale: true,
-//         pixelRatio: 3
-//     }
-//     htmlToImage.toPng(signatureArea, options)
-//         .then(function (dataUrl) {
-//             var link = document.createElement('a');
-//             link.download = 'filename.htm';
-//             link.href = 'data:text/html;charset=UTF-8,' + encodeURIComponent(generateHTMLSig(dataUrl))
-//             link.click();
-//         });
-// });
-
-// // Download Event 3.ALTERNATIVE
-// const downloadButton = document.querySelector('.download');
-// const signatureArea = document.querySelector(".signature");
-// downloadButton.addEventListener('click', function () {
-//     html2canvas(signatureArea).then((canvas) => {
-//         const base64image = canvas.toDataURL('image/png');
-//         let anchor = document.createElement('a');
-//         anchor.setAttribute('href', base64image);
-//         anchor.setAttribute('download', 'my-image.png');
-//         anchor.click();
-//         anchor.remove();
-//     });
-// });
-
 // Form Reset Event
 const deleteButton = document.querySelector('#delete-button');
 const mainForm = document.querySelector('.main-form form');
@@ -268,27 +214,36 @@ document.querySelector('input[type="file"]').addEventListener('change', function
     };
 });
 
-const formBanner = document.querySelector('.form-banner');
+// Input File Change Event
 const inputFile = document.querySelector('#input-file');
-function initialize()
-{
-    document.body.onfocus = checkIt;
-}
-    
-function checkIt()
-{
+inputFile.addEventListener('change', function () {
     if (inputFile.value.length !== 0) {
         console.log ('File Loaded!');
+        viewArea.classList.remove('form-control');
+        signatureArea.classList.add('form-control');
+        signatureArea.style.height = '325px';
     }
-    else {
-        // if (formBanner.getAttribute('src') === '') {
-        //     formBanner.remove();
-        // }
-        // bannerCell.removeChild(formBanner);
-        console.log ('File not Loaded!');
+})
+
+// Input File Click Event
+inputFile.addEventListener('click', function () {
+    if (inputFile.value.length === 0) {
         viewArea.classList.add('form-control');
         signatureArea.classList.remove('form-control');
         signatureArea.style.height = '195px';
-        document.body.onfocus = null;
     }
-}	
+    else {
+        viewArea.classList.remove('form-control');
+        signatureArea.classList.add('form-control');
+        signatureArea.style.height = '325px';
+    }
+})
+
+// Delete Extra Img Event for Banner
+// window.addEventListener('focus', function () {
+//     const formBanner = document.querySelector('.form-banner');
+//     let src = formBanner.getAttribute('src');
+//     if (inputFile.value.length === 0 && !src) {
+//         formBanner.remove();
+//     }
+// })
